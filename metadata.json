@@ -1,5 +1,5 @@
 {
-  "name": "Strategos: Strategic Challenge Engine",
-  "description": "An AI-powered strategic simulation engine that generates complex scenarios, tracks dynamic metrics, and adapts to user decisions in real-time.",
+  "name": "[Phase 1] Strategic Challenge Engine",
+  "description": "Phase 1 of the Maxicomm CSO toolkit: an AI-powered engine that helps media and \nadtech teams turn unstructured client inputs (notes, briefings, PDFs, decks) \ninto a sharp strategic challenge.\n\nThe app:\n• Ingests raw context and optional files from newbiz, upsell or cross-sell opportunities.  \n• Formulates two alternative challenge statements (A/B) focused on digital media & adtech.  \n• Builds a Rumelt-style kernel: diagnosis, guiding policy, cultural tension, market \n  opportunity, consumer insight, behavioural justification, key assumptions and mental models.  \n• Delivers three strategic readings (challenger, consultive, mixed) to guide the team \n  before moving to tactical planning.\n\nDesigned as the mandatory first step in any new business, upsell or cross-sell process \nfor LLYC/Apache media and adtech teams.\n",
   "requestFramePermissions": []
 }
