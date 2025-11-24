@@ -1,0 +1,5 @@
+{
+  "name": "Strategos: Strategic Challenge Engine",
+  "description": "An AI-powered strategic simulation engine that generates complex scenarios, tracks dynamic metrics, and adapts to user decisions in real-time.",
+  "requestFramePermissions": []
+}
