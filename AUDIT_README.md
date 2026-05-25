@@ -27,6 +27,10 @@ python3 04_check_canibalizacion.py
 # 3. Auditoría on-page de la muestra Shopify
 python3 05_audit_onpage_shopify.py
 # → 05_onpage_shopify.md
+
+# 4. Cadenas de redirección PrestaShop (30 URLs, lee el CSV de 03)
+python3 06_redirect_chains.py
+# → 06_redirecciones.csv
 ```
 
 ## Mapa de archivos
@@ -38,15 +42,18 @@ python3 05_audit_onpage_shopify.py
 | `03_crawl_sitemaps.py` | crawler de sitemaps (recursivo, cap 500, muestreo estratificado) | ✅ listo, ejecutar local |
 | `04_check_canibalizacion.py` | probador HEAD apex vs PrestaShop (cap 200, delay 1-2s) | ✅ listo, ejecutar local |
 | `05_audit_onpage_shopify.py` | extracción on-page con BeautifulSoup (7 URLs) | ✅ listo, ejecutar local |
+| `06_redirect_chains.py` | seguimiento de cadenas de redirección PrestaShop (30 URLs, detecta 302/loops/meta-refresh/JS) | ✅ listo, ejecutar local |
 | `03_sitemaps.csv` / `03_sitemaps_analysis.md` | output de 03 | ⏳ se genera al ejecutar |
 | `04_canibalizacion.csv` | output de 04 | ⏳ se genera al ejecutar |
 | `05_onpage_shopify.md` | output de 05 | ⏳ se genera al ejecutar |
+| `06_redirecciones.csv` | output de 06 | ⏳ se genera al ejecutar |
 
 ## Parámetros configurables
 
 - `03_crawl_sitemaps.py`: edita constantes al principio (`SAMPLE_CAP`, `ENVS`, `TYPE_RULES`).
 - `04_check_canibalizacion.py`: `--limit N`, `--delay-min`, `--delay-max`.
 - `05_audit_onpage_shopify.py`: `--home`, `--collection URL` (×3), `--product URL` (×3). Sin argumentos hace autodescubrimiento desde el home.
+- `06_redirect_chains.py`: `--sample N` (default 30), `--input PATH` (default `03_sitemaps.csv`), `--delay-min/--delay-max`.
 
 ## Si quieres que yo procese los resultados
 
