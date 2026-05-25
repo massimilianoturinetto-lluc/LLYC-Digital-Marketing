@@ -1,0 +1,288 @@
+# Robots.txt optimizado para lacasadelascarcasas.es
+# Última actualización: Noviembre 2025
+
+# === CONFIGURACIÓN GLOBAL ===
+
+User-agent: *
+
+#Generico Shopify
+Disallow: /buscar/
+Disallow: /admin/
+Disallow: /cart/
+Disallow: /orders
+Disallow: /checkout/
+Disallow: /account/
+Disallow: /policies/
+Disallow: /services/
+Disallow: /application/
+Disallow: /apps/
+
+
+# Apps y funcionalidades especificas
+Disallow: /discount/
+Disallow: /zakeke/customize/
+
+# APIs y endpoints internos
+Disallow: /api/
+Disallow: /.well-known/shopify/
+Disallow: /wallets/
+Disallow: /payments/
+Disallow: /services/product_recommendations
+
+# Control de busqueda interna
+Disallow: /search?
+Disallow: /search/suggest
+Disallow: /buscar?
+Disallow: /m=and&q=
+
+# Parametros de sesion y tracking
+Disallow: /*?*session_id=
+Disallow: /*?*cart_sig=
+Disallow: /*?*preview_theme_id=
+Disallow: /*?*preview_script_id=
+DisAllow: /*?*pbcid=
+
+# Parametros UTM (evitar contenido duplicado)
+Disallow: /*?*utm_source=
+Disallow: /*?*utm_medium=
+Disallow: /*?*utm_campaign=
+Disallow: /*?*utm_term=
+Disallow: /*?*utm_content=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /*?*mc_cid=
+Disallow: /*?*mc_eid=
+Disallow: /*?*filters=
+Disallow: /*?*direction=
+Disallow: /*?*cursor=
+
+# Permitir recursos estaticos para renderizado
+Allow: /*.css
+Allow: /*.js
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.png
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.woff
+Allow: /*.woff2
+Allow: /*.ttf
+Allow: /*.eot
+Allow: /*.ico
+
+# Permitir archivos CDN de Shopify
+Allow: /cdn/
+Allow: /cdn-cgi/
+
+#Bloqueo de feeds para crawlers
+User-agent: *
+Allow: /feed/$
+Disallow: /*feed*
+Disallow: /feed/
+Disallow: /comments/feed/
+Disallow: /*/feed/$
+Disallow: /*/feed/rss/$
+Disallow: /*/trackback/$
+Disallow: /*/*/feed/$
+Disallow: /*/*/feed/rss/$
+Disallow: /*/*/trackback/$
+Disallow: /*/*/*/feed/$
+Disallow: /*/*/*/feed/rss/$
+Disallow: /*/*/*/trackback/$
+
+#Control presupuesto rastreo
+User-agent: AhrefsBot
+User-agent: AhrefsSiteAudit
+User-agent: Slurp
+User-agent: Pinterest
+Crawl-delay: 5
+User-agent: noxtrumbot
+Crawl-delay: 50
+
+#Previene problemas de recursos bloqueados en CSS y JS
+User-Agent: *
+Allow: /*.css$
+Allow: /*.js$
+
+# === BUSCADORES TRADICIONALES ===
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkouts/
+Disallow: /orders
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin
+Disallow: /cart
+Disallow: /checkouts/
+Disallow: /orders
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Crawl-delay: 2
+
+# === BOTS DE IA - BUSQUEDA Y CHAT ===
+# OpenAI / ChatGPT
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic / Claude
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bard
+Allow: /
+
+# Microsoft / Bing AI
+User-agent: Bingbot-AI
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Otros bots de IA importantes
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: PhindBot
+Allow: /
+
+User-agent: FirecrawlAgent
+Allow: /
+
+User-agent: ExaBot
+Allow: /
+
+User-agent: AndiBot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: applebot
+Allow: /
+
+User-agent: applebot-extended
+Allow: /
+
+# === SOCIAL MEDIA BOTS ===
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+Crawl-delay: 1
+
+# === HERRAMIENTAS SEO (Control de presupuesto) ===
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: AhrefsSiteAudit
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: SEOkicks
+Disallow: /
+
+User-agent: SiteAnalyzerBot
+Disallow: /
+
+# === BLOQUEO DE BOTS MALICIOSOS Y SCRAPERS ===
+User-agent: HTTrack
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: WebStripper
+Disallow: /
+
+User-agent: WebZIP
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: Offline Explorer
+Disallow: /
+
+User-agent: SiteSnagger
+Disallow: /
+
+User-agent: WGet
+Disallow: /
+
+User-agent: WebReaper
+Disallow: /
+
+User-agent: WebSauger
+Disallow: /
+
+User-agent: Website eXtractor
+Disallow: /
+
+User-agent: NinjaBot
+Disallow: /
+
+User-agent: Download Ninja
+Disallow: /
+
+#Sitemaps
+Sitemap: https://lacasadelascarcasas.es/sitemap.xml
+
+
+# Bloque anadido solicitado - evita indexacion de URLs con parametros de cursor/direction/filters
+User-agent: *
+Disallow: /*?cursor=
+Disallow: /*?direction=
+Disallow: /*?filters=

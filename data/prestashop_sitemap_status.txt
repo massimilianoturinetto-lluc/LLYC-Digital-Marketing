@@ -1,0 +1,8 @@
+URL: https://prestashop.lacasadelascarcasas.es/sitemap.xml
+Date: 2026-05-25
+Status: 404 ("la página no se encuentra")
+Tested by: massimiliano.turinetto@llyc.global (manual)
+Note: subdomain DNS resolves to 34.160.183.245 (Google Cloud LB), so the server itself is up.
+      The sitemap.xml resource specifically returns 404. Combined with the robots.txt
+      Disallow:/ on the same subdomain, this is a deliberate de-indexing attempt.
+      However, robots.txt Disallow does NOT remove already-indexed URLs from Google.
